@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset="utf-8" />
+  <title class="header">{% block head_title %}somame.com{% endblock head_title %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  {% include 'snippets/css.html' %}
+  <meta name="viewport" content = "width=vw, initial-scale=1.0">
+  {% include 'snippets/js.html' %}
+  </head>
+<body>
+  {% include 'snippets/nav.html' %}
+
+  <div class='container2'>
+  {% block content %}{% endblock content %}
+  </div>
+
+  <div class="content">
+
+  </div>
+
+{% include 'snippets/js.html' %}
+</body>
+
+{% include 'snippets/foot.html' %}
+
+</html>

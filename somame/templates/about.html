@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head_title %}About || {{ block.super }}{% endblock head_title %}
+
+
+
+{% block content %}
+<h1>About Us</h1>
+</br>
+<p>
+  Somame errands is a Ghanaian based service company that offers to perform all kinds of errands for our smart generation
+</p>
+<hr>
+<div class="container3">
+  <p class="textpromo">
+    Guess what?? Somame is running free first errands for everyone. If its your first time we are to run an errand for you, will attract a 0% service charge.
+    Yes you heard right, you pay nothing at all!!! Fell free to call anyday, anytime on 0548-785298 /0574-344543. Live easier and smarter. #somame
+  </p>
+  <img src= '/static/img/soma.jpg'; style="width:100%;height:550px;margin-top:12px;"></img>
+</div>
+</br>
+{% include 'snippets/sidebar.html' %}
+<div class="container">
+  <a href='mailto:youremail@gmail.com'>Email Us!</a>
+</div>
+{% endblock  %}

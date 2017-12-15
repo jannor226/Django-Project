@@ -1,0 +1,74 @@
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script async defer src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCoZAMH5xY57ky-TdnTNkPxbQSA-r_MW74&callback=initMap" type="text/javascript"></script>
+<script>
+$(function () {
+  var iframe = $('.main-content iframe')[0],
+  menu_links = $('.items li a'),
+  selected_link,
+  href;
+
+
+  $(window).on('hashchange', function() {
+
+    if(window.location.hash){
+      href = window.location.hash.substring(1);
+      selected_link = $('a[href$="'+href+'"]');
+
+      // Check if the hash is valid - it should exist as one of the menu items.
+      if(selected_link.length){
+        iframe.contentWindow.location.replace(href + '.html');
+
+        menu_links.removeClass('active');
+        selected_link.addClass('active');
+      }
+    }
+    else{
+      iframe.contentWindow.location.replace('Footer-with-logo.html');
+      menu_links.removeClass('active');
+      $(menu_links[0]).addClass('active');
+    }
+
+  });
+
+
+  if(window.location.hash){
+    $(window).trigger('hashchange');
+  }
+
+
+  menu_links.on('click', function (e) {
+    e.preventDefault();
+
+    window.location.hash = $(this).attr('href');
+  });
+
+
+  $('#template-select').on('change', function (e) {
+    e.preventDefault();
+
+    window.location.hash = $(this).find(':selected').data('href');
+  });
+
+});
+</script>
+
+<script type="text/javascript">
+function initMap() {
+  var uluru = {lat: 25, lng: 131};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
+</script>

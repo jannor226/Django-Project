@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+<h3>Have Questions? Please Send them over and we would be glad to Assist you!</h3>
+<h3>{{ block.super }}</h3>
+<div class ="container6">
+   <form method="POST" class = "former" >{% csrf_token %}
+     {% load widget_tweaks %}
+     {{ form.as_p }}
+
+   <button type="submit" class="btn btn-primary">Sign Up!</button>
+   </form>
+</div>
+
+{% endblock content %}

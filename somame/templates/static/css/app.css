@@ -1,0 +1,216 @@
+.container3 {
+    padding-bottom: 0%;
+    margin-bottom : 0px;
+    margin-top: -10px;
+}
+
+.sohead {
+  font-family: cursive;
+  font-size: 40px;
+  color: #161313;
+  margin-left: 5vw;
+
+}
+
+.layman{
+  width:90%;
+  height:60%;
+  background-image: url('{{static}}/img/soma.jpg');
+}
+
+.former{
+  width:60%;
+  height:45%;
+}
+
+.container2 {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-top: -30px;
+}
+
+.form-control {
+  width: 60px;
+  margin-left: 0vw;
+}
+
+.container6 {
+  width: 80vw;
+  margin-left: 10vw;
+}
+
+.navbar {
+  /*height: 5%;*/
+  width: 100vw;
+  background-color:  #0e0b16;
+  text-align: center;
+  min-height: 35px;
+  margin-top: 0px;
+}
+
+.textpromo {
+  text-align: center;
+}
+
+
+#map {
+  width: 50%;
+  height: 400px;
+  background-color: grey;
+}
+
+.nav-link {
+  font-size: 15px;
+  color: #e7dfdd;
+  margin-right: 0%;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-item {
+  width: 16.0%;
+  /*height: 5%;*/
+  min-height: 35px;
+}
+
+.nav-item a:hover, .nav-item a:focus {
+    text-decoration: none;
+    color: #0c0909;
+}
+
+#myFooter {
+    background-color: #0e0b16;
+    color: white;
+    padding-top: 0px;
+}
+
+#myFooter .footer-copyright {
+    background-color: #565656;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+#myFooter .row {
+}
+
+#myFooter .navbar-brand {
+    margin-top: 45px;
+    height: 65px;
+}
+
+.btn-primary {
+    color: #565656;
+    background-color: #565656;
+    border-color: #2e6da4;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #e7dfdd;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter h2 a{
+    font-size: 50px;
+    text-align: center;
+    color: #e7dfdd;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .social-networks {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+    font-size: 32px;
+    color: #e7dfdd;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+    text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+
+#myFooter .btn {
+    color: white;
+    background-color: #d84b6b;
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+    line-height: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}
+
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
+.content{
+   flex: 1 0 auto;
+   -webkit-flex: 1 0 auto;
+   min-height: 200px;
+}
+
+#myFooter{
+   flex: 0 0 auto;
+   -webkit-flex: 0 0 auto;
+
+}
